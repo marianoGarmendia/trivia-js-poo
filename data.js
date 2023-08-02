@@ -1,18 +1,19 @@
 const data = [
   {
-    question: "¿Cual de las siguientes opciones no es un editor de codigo?",
-    choices: ["vim", "vscode", "emacs", "word"],
-    answer: "word",
+    question: "¿Cual de los siguientes lenguajes interpreta el navegador?",
+    choices: ["java", "Python", "Javascript", "C++"],
+    answer: "Javascript",
   },
   {
-    question: "Que lenguaje no es orientado a Objetos",
-    choices: ["Java", "Haskell", "C++", "Python"],
-    answer: "Haskell",
+    question:
+      "¿como defino un string como tipo de dato de una variable en typescript?",
+    choices: ["=string", "(string)", ":string", "stringify"],
+    answer: ":string",
   },
   {
-    question: "Que lenguaje no sirve para estilizar sitios web?",
-    choices: ["Stylus", "Less", "Sass", "CSS", "PostCSS", "NextCSS"],
-    answer: "NextCSS",
+    question: "con que comando chequeas los commits en git",
+    choices: ["checkout", "branch", "add", "commit", "log"],
+    answer: "log",
   },
 ];
 
