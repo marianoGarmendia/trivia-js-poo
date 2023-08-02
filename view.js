@@ -1,7 +1,12 @@
 import { Controller } from "./controller.js";
+import { Models } from "./models.js";
 
 class View {
-  constructor() {}
+  model;
+
+  constructor() {
+    this.model = new Models();
+  }
   render(data) {
     if (document !== undefined) {
       let div = document.getElementById("pregunta");
@@ -15,22 +20,18 @@ class View {
         button.value = choice;
         button.className = "button";
         divCHoices.appendChild(button);
+
         button.addEventListener("click", () => {
           const controller = new Controller();
           controller.answerCheck(button.value);
-          console.log(button.value);
+
+          this.clean();
+          new Controller().render();
         });
-        // console.log(button);
-        // console.log(button);
       });
 
       document.getElementById("caja-choices").appendChild(divCHoices);
-      //   console.log(divCHoices);
-
-      // document.getElementById("respuesta")?.innerText(data.question);
     }
-    // console.log(span);
-    // console.log(data.question);
   }
 
   clean() {
@@ -42,21 +43,21 @@ class View {
   isCorrect(answer) {
     if (answer) {
       document.getElementById("respuesta").innerText = "correct";
-      //   console.log("Correct");
-      //   controller.score;
     } else {
       document.getElementById("respuesta").innerText = "Incorrect";
 
-      //   document.getElementById("respuesta").innerText("Incorrect");
       console.log("Incorrect");
     }
   }
 
   renderScore(score) {
-    const controller = new Controller();
-
     document.getElementById("score").innerText = score;
     console.log(score);
+  }
+
+  endGame() {
+    const mensajeFinal = document.getElementById("pregunta");
+    mensajeFinal.innerText = "El juego ha finalizado";
   }
 }
 
