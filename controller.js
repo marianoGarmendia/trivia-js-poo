@@ -48,7 +48,7 @@ class Controller {
     }
     this.incrementQuestionIndex();
     // this.render();
-    console.log(questionIndex);
+    // console.log(questionIndex);
   }
 
   cleanScreen() {

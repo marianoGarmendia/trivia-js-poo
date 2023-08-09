@@ -7,20 +7,31 @@ body {
 }
 
 .caja {
+  padding: 20px;
+  border-color: rgb(82, 81, 81);
+  background-color: #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   /* width: 200px; */
   /* height: 300px; */
   border: solid;
   margin-top: 100px;
   width: 30%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.boton {
-  margin: 10px;
-  padding: 10px;
+.buttons {
+  display: flex;
+  /* margin: 0px 10px; */
+}
+
+.button {
+  margin: 5px;
+  padding: 15px;
   /* width: 80%; */
   /* contain: strict; */
 }
@@ -28,4 +39,9 @@ body {
 .resultado {
   padding: 15px;
   margin-bottom: 10px;
+}
+
+.img-check {
+  width: 50px;
+  height: 50px;
 }

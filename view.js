@@ -42,9 +42,11 @@ class View {
 
   isCorrect(answer) {
     if (answer) {
-      document.getElementById("respuesta").innerText = "correct";
+      document.getElementById("simbolo-respuesta").innerHTML =
+        '<img class="img-check" src ="img/aceptar.png"/>';
     } else {
-      document.getElementById("respuesta").innerText = "Incorrect";
+      document.getElementById("simbolo-respuesta").innerHTML =
+        '<img class="img-check" src ="img/cancelar.png"/>';
 
       console.log("Incorrect");
     }
